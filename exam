@@ -1,0 +1,111 @@
+# Rapport d’Incident de Cybersécurité
+
+## Informations Générales
+
+- **Nom de l’incident :** Ransomware WannaCry - Infection réseau interne  
+- **Date de découverte :** 15/04/2025  
+- **Auteur du rapport :** Hind Tazi, Hind.Tazi@email.com  
+- **Révision :** 1.0, 04/05/2025  
+
+---
+
+## 1. Résumé de l’incident
+
+Le 15 avril 2025, un incident de ransomware de type WannaCry a été détecté sur le réseau interne de l’organisation. Plusieurs postes de travail et serveurs ont été chiffrés, entraînant une interruption partielle des services critiques. L’attaque a été détectée grâce à une alerte du système de détection d’intrusion (IDS). L’impact principal a été une indisponibilité temporaire des données métier pendant environ 6 heures.
+
+---
+
+## 2. Portée et Impact
+
+- **Portée** :  
+  - Systèmes impactés : 12 postes de travail, 3 serveurs de fichiers.  
+  - Utilisateurs affectés : Environ 50 utilisateurs dans le département finance et IT.
+
+- **Impact** :  
+  - Opérationnel : Interruption des opérations financières et accès aux documents partagés.  
+  - Financier : Estimation d’une perte de productivité évaluée à 15 000 € sur la journée.  
+  - Réputationnel : Aucun impact externe détecté, communication interne maîtrisée.
+
+---
+
+## 3. Chronologie de l’incident
+
+| Date/Heure          | Événement clé                                    |
+|---------------------|-------------------------------------------------|
+| 15/04/2025 08:30    | Début probable de l’infection via email piégé   |
+| 15/04/2025 09:15    | Alerte IDS détectée sur activité suspecte        |
+| 15/04/2025 09:30    | Confirmation de l’infection par l’équipe sécurité|
+| 15/04/2025 10:00    | Confinement des postes infectés                   |
+| 15/04/2025 12:00    | Début de l’éradication et nettoyage               |
+| 15/04/2025 14:30    | Restauration des données à partir des sauvegardes|
+| 15/04/2025 15:30    | Retour à la normale des services                   |
+
+---
+
+## 4. Analyse Technique
+
+- **Vecteur d’attaque identifié** : Email de phishing contenant une pièce jointe malveillante.  
+- **Vulnérabilités exploitées** :  
+  - Absence de mise à jour critique du système Windows (patch MS17-010 non appliqué).  
+  - Utilisateurs non formés à la détection des emails suspects.  
+- **Outils et méthodes utilisés par l’attaquant** :  
+  - Exploitation de la vulnérabilité SMB EternalBlue pour propagation.  
+  - Chiffrement des fichiers avec demande de rançon.  
+- **Indicateurs de compromission (IoC)** :  
+  - Adresse IP source suspecte : 192.168.10.45 (interne, poste compromis).  
+  - Fichiers avec extension .WNCRY.  
+  - Processus anormal “wannacry.exe” détecté.
+
+---
+
+## 5. Mesures de Confinement, Éradication et Récupération
+
+- **Confinement** :  
+  - Déconnexion immédiate des postes infectés du réseau.  
+  - Blocage des ports SMB sur le firewall.  
+- **Éradication** :  
+  - Suppression des fichiers malveillants et processus associés.  
+  - Application des correctifs de sécurité Windows sur tous les postes.  
+- **Récupération** :  
+  - Restauration des fichiers à partir des sauvegardes journalières.  
+  - Vérification de l’intégrité des systèmes restaurés.  
+- **Retour à la normale** :  
+  - Services rétablis le 15/04/2025 à 15:30 après validation par l’équipe IT.
+
+---
+
+## 6. Recommandations et Améliorations
+
+- **Failles identifiées** :  
+  - Retard dans l’application des mises à jour critiques.  
+  - Manque de sensibilisation des utilisateurs au phishing.  
+- **Mesures correctives proposées** :  
+  - Mise en place d’un processus automatisé de patch management.  
+  - Formation régulière des utilisateurs sur la sécurité des emails.  
+- **Outils de détection à renforcer** :  
+  - Déploiement d’un Endpoint Detection and Response (EDR) pour détection avancée.  
+  - Amélioration des règles IDS pour détection précoce des ransomwares.  
+- **Plan de communication** :  
+  - Notification immédiate des équipes internes.  
+  - Préparation d’un communiqué pour les clients si besoin.
+
+---
+
+## 7. Suivi et Amélioration Continue
+
+- **Leçons tirées** :  
+  - Importance cruciale de maintenir les systèmes à jour.  
+  - Nécessité d’une surveillance proactive et d’une réponse rapide.  
+- **Actions à planifier** :  
+  - Exercices de simulation d’attaque ransomware trimestriels.  
+  - Revue annuelle des politiques de sécurité informatique.  
+- **Date de la prochaine révision du plan** : 01/10/2025
+
+---
+
+## 8. Annexes
+
+- Logs IDS du 15/04/2025  
+- Liste des postes et serveurs affectés  
+- Copies des emails suspects détectés  
+- Diagramme réseau simplifié avant et après confinement
