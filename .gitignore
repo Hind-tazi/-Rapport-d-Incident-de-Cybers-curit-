@@ -1,0 +1,89 @@
+# .gitignore - Hind Tazi Cybersecurity
+
+# Fichiers système
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editeurs & IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.atom/
+.vim/
+
+# Environnements Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs & Fichiers temporaires
+*.log
+*.pot
+*.mo
+*.db
+*.sqlite
+*.sqlite3
+
+# Fichiers sensibles
+*.pem
+*.key
+*.pub
+*.pfx
+*.p12
+id_rsa
+id_rsa.pub
+.ssh/
+secrets.txt
+credentials.txt
+.env
+.env.local
+
+# Rapports & Sortie
+*.html
+*.pdf
+test-results/
+coverage/
+htmlcov/
+
+# Node (si portfolio avec npm)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Configuration locale
+config/
+local/
+.config/
+
+# Fichiers OS
+.AppleDouble
+.LSOverride
+.TemporaryItems
